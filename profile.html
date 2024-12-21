@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HASUTA - Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.19.0/md5.min.js"></script>
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+    <!-- Add this right after the body tag -->
+    <div class="loading-overlay">
+        <div class="loader"></div>
+    </div>
+    
+    <!-- Your existing HTML content -->
+      <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <img src="image/download.png" alt="HASUTA" class="logo-image">
+            </div>
+          
+            <div class="nav-icons">
+                <a href="#" class="icon-link"><i class="fas fa-search"></i></a>
+                <a href="index.html" class="icon-link">
+                    <i class="fas fa-home"></i>
+                </a>
+                <a href="profile.html" class="icon-link">
+                    <i class="fas fa-user"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+   
+    <!-- Main Content Area -->
+    <main>
+        <div class="profile-container">
+            <!-- Profile Header -->
+            <div class="profile-header">
+                <div class="profile-cover">
+                    <img src="https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Cover Photo">
+                </div>
+                <div class="profile-info">
+                    <div class="profile-avatar">
+                        <img id="profileAvatar" src="image/OIP (hgjjm.jpg">
+                    </div>
+                    <div class="profile-details">
+                        <div class="profile-name">
+                            <h2 id="profileName"></h2>
+                        </div>
+                        <div class="profile-contact-info">
+                            <p class="contact-item">
+                                <span class="contact-label">Email</span>
+                                <span id="profileEmail" class="email-value"></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Stats -->
+            <div class="profile-stats">
+                <a href="orders.html" class="stat-item animated-stat" style="text-decoration: none; color: inherit;">
+                    <i class="fas fa-box bounce-icon"></i>
+                    <div class="stat-details">
+                        <span class="stat-label">My Orders</span>
+                    </div>
+                </a>
+                <a href="wishlist.html" class="stat-item" style="text-decoration: none; color: inherit;">
+                    <i class="fas fa-heart heart-beat"></i>
+                    <div class="stat-details">
+                        <span class="stat-label">My Wishlist</span>
+                    </div>
+                </a>
+                <a href="cart.html" class="stat-item" style="text-decoration: none; color: inherit;">
+                    <i class="fas fa-shopping-cart cart-bounce"></i>
+                    <div class="stat-details">
+                        <span class="stat-label">My Cart</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Profile Actions -->
+            <div class="profile-actions">
+                <a href="#" class="action-card">
+                    <i class="fas fa-headset"></i>
+                    <span>Support Us</span>
+                </a>
+                <a href="#" class="action-card">
+                    <i class="fas fa-building"></i>
+                    <span>About Company</span>
+                </a>
+                <a href="#" class="action-card">
+                    <i class="fas fa-seedling"></i>
+                    <span>Grow With Us</span>
+                </a>
+                <a href="#" class="action-card" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </div>
+    </main>
+    
+    <script type="module" src="js/profile.js"></script>
+</body>
+</html>

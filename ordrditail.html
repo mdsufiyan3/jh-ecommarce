@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/ordrditail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="logo">
+               
+                <h2>Dashboard</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="ordrditail.html"><i class="fas fa-bag-shopping"></i> Orders</a></li>
+                <li><a href="myproducts.html"><i class="fas fa-box-open"></i> my product-list</a></li>
+                <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header>
+                <div class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                </div>
+                
+                <div class="user-profile">
+                    <img src="https://via.placeholder.com/40" alt="Profile">
+                    <span>John Doe</span>
+                </div>
+            </header>
+
+            <!-- Add this heading -->
+            <h1 class="page-title">Orders</h1>
+
+            <!-- Add this status overview section -->
+            <div class="order-status-overview">
+                <div class="status-card">
+                    <div class="status-icon processing">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <div class="status-details">
+                        <h3>Processing</h3>
+                        <span class="status-count">25</span>
+                    </div>
+                </div>
+                
+                <div class="status-card">
+                    <div class="status-icon shipped">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <div class="status-details">
+                        <h3>Shipped</h3>
+                        <span class="status-count">42</span>
+                    </div>
+                </div>
+                
+                <div class="status-card">
+                    <div class="status-icon delivered">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="status-details">
+                        <h3>Delivered</h3>
+                        <span class="status-count">85</span>
+                    </div>
+                </div>
+                
+                <div class="status-card">
+                    <div class="status-icon canceled">
+                        <i class="fas fa-times-circle"></i>
+                    </div>
+                    <div class="status-details">
+                        <h3>Canceled</h3>
+                        <span class="status-count">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chart Section -->
+            <div class="chart-section">
+                <canvas id="myChart"></canvas>
+            </div>
+        </main>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-code-here.js"></script>
+    <script src="js/ordrditail.js"></script>
+</body>
+</html> 

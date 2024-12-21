@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Placed - HASUTA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/order-placed.css">
+</head>
+<body>
+    <div class="success-container">
+        <div class="success-animation">
+            <i class="fas fa-check success-icon"></i>
+        </div>
+        
+        <h1 class="success-title">ORDER PLACED!</h1>
+        <p class="success-message">Thank you for shopping with HASUTA</p>
+
+        <div class="order-details">
+            <div class="order-info">
+                <div class="info-item">
+                    <div class="info-label">Order Number</div>
+                    <div class="info-value" id="orderNumber">#HS12345</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Product</div>
+                    <div class="info-value" id="productName">Loading...</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Order Date</div>
+                    <div class="info-value" id="orderDate">March 14, 2024</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Total Amount</div>
+                    <div class="info-value" id="orderAmount">₹2,499</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Payment Method</div>
+                    <div class="info-value" id="paymentMethod">UPI</div>
+                </div>
+            </div>
+
+            <div class="delivery-timeline">
+                <div class="timeline-line">
+                    <div class="progress-line"></div>
+                </div>
+                <div class="timeline-point">
+                    <div class="point-icon">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="point-text">Order Placed</div>
+                </div>
+                <div class="timeline-point">
+                    <div class="point-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <div class="point-text">Processing</div>
+                </div>
+                <div class="timeline-point">
+                    <div class="point-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <div class="point-text">Shipped</div>
+                </div>
+                <div class="timeline-point">
+                    <div class="point-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="point-text">Delivered</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <button class="btn primary-btn" onclick="trackOrder()">
+                <i class="fas fa-box bounce-icon"></i>
+                My Orders
+            </button>
+            <button class="btn secondary-btn" onclick="continueShopping()">
+                <i class="fas fa-shopping-bag"></i>
+                Continue Shopping
+            </button>
+        </div>
+    </div>
+
+    <script src="js/order-placed.js"></script>
+</body>
+</html> 

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - HASUTA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/checkout.css">
+</head>
+<body>
+    <div class="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <div class="checkout-header">
+        <img src="image/OIP-removebg-preview.png" alt="Delivery Boy" class="delivery-boy">
+        <h1>Checkout</h1>
+    </div>
+
+    <div class="checkout-container">
+        <!-- Order Summary Section -->
+        <div class="order-summary">
+            <div class="checkout-layout">
+                <div class="cart-summary-section">
+                    <h2 class="section-title">Order Summary</h2>
+                    <div class="cart-items-container">
+                        <div class="cart-items" id="cartItems">
+                            <!-- Items will be populated dynamically from localStorage -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shipping Information Section -->
+                <div class="shipping-info">
+                    <h2>Shipping Information</h2>
+                    <form class="shipping-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group phone-group">
+                            <label for="phone">Phone Number</label>
+                            <div class="phone-input-container">
+                                <input type="text" id="countryCode" value="+91" maxlength="4">
+                                <input type="tel" id="phone" placeholder="Enter phone number" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="pincode">Pincode</label>
+                            <input type="text" id="pincode" maxlength="6" required>
+                            <small class="pincode-status" id="pincodeStatus"></small>
+                        </div>
+                        <div class="form-group">
+                            <label for="state">State</label>
+                            <input type="text" id="state" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <textarea id="address" required></textarea>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Price Details Section -->
+                <div class="price-details">
+                    <h2>Price Details</h2>
+                    <div class="price-breakdown">
+                        <div class="price-row">
+                            <span>Subtotal</span>
+                            <span id="subtotal">₹3,999.00</span>
+                        </div>
+                        <div class="price-row">
+                            <span>Shipping</span>
+                            <span id="shipping">₹25.00</span>
+                        </div>
+                        <div class="price-row total">
+                            <span>Total</span>
+                            <span id="total">₹4,024.00</span>
+                        </div>
+                    </div>
+
+                    <!-- Payment Method Section -->
+                    <div class="payment-section">
+                        <h3 class="payment-title">Select Payment Method</h3>
+                        <div class="payment-options">
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="online">
+                                <span>Online Payment</span>
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="cod">
+                                <span>Cash on Delivery</span>
+                            </label>
+                        </div>
+                        <button class="proceed-btn" id="checkoutButton">
+                            <span>PROCEED TO PAYMENT</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Customer Benefits Section -->
+    <section class="customer-benefits">
+        <div class="benefits-container">
+            <div class="benefit-item">
+                <i class="fas fa-headset"></i>
+                <div class="benefit-content">
+                    <h3>24/7 Customer Support</h3>
+                    <p>Our team is here to help you anytime</p>
+                </div>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-undo"></i>
+                <div class="benefit-content">
+                    <h3>Easy Returns</h3>
+                    <p>7 days easy return policy</p>
+                </div>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-truck"></i>
+                <div class="benefit-content">
+                    <h3>Fast Delivery</h3>
+                    <p>Quick delivery across India</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script type="module" src="js/firebase-config.js"></script>
+    <script type="module" src="js/firebase-utils.js"></script>
+    <script type="module" src="js/checkout.js"></script>
+</body>
+</html> 
